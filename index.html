@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let height = +prompt("Nhập vào chiều cao (m):")
+      let weight = +prompt("Nhập vào cân nặng (kg):")
+      let bmi = weight / (height * height)
+      let string = ""
+      switch (true) {
+        case bmi < 16:
+          string = "Gầy độ III"
+          break
+        case bmi >= 16 && bmi < 17:
+          string = "Gầy độ II"
+          break
+        case bmi >= 17 && bmi < 18.5:
+          string = "Gầy độ I"
+          break
+        case bmi >= 18.5 && bmi < 25:
+          string = "Bình thường"
+          break
+        case bmi >= 25 && bmi < 30:
+          string = "Thừa cân"
+          break
+        case bmi >= 30 && bmi < 35:
+          string = "Béo phì độ I"
+          break
+        case bmi >= 35 && bmi < 40:
+          string = "Béo phì độ II"
+          break
+        case bmi >= 40:
+          string = "Béo phì độ III"
+          break
+      }
+      alert(string)
+    </script>
+  </body>
+</html>
